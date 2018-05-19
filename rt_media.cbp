@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="rt_media" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/rt_media" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="../../../../_portable/codeblocks-17.12mingw/MinGW/include" />
+					<Add directory="../rt_media" />
+					<Add directory="FatFs" />
+					<Add directory="media" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../_portable/codeblocks-17.12mingw/MinGW/lib/libkernel32.a" />
+					<Add library="../../../../_portable/codeblocks-17.12mingw/MinGW/lib/libpthread.a" />
+					<Add directory="../../../../_portable/codeblocks-17.12mingw/MinGW/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/rt_media" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="FatFs/diskio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FatFs/diskio.h" />
+		<Unit filename="FatFs/ff.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="FatFs/ff.h" />
+		<Unit filename="FatFs/ff_macro.h" />
+		<Unit filename="FatFs/ffconf.h" />
+		<Unit filename="FatFs/integer.h" />
+		<Unit filename="freertos_warp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="freertos_warp.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="media/codec/codec_jpg_dec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="media/codec/codec_jpg_enc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="media/codec/codec_jpg_simulater.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="media/codec/codec_wav.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="media/demux/avi/avi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="media/demux/avi/avi.h" />
+		<Unit filename="media/demux/avi/riff.h" />
+		<Unit filename="media/fmt_avi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="media/fmt_avi_mux.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="media/media_comm.h" />
+		<Unit filename="media/media_proc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="media/stream_def.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="media/util/rbuf_opt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="media/util/rbuf_opt.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
