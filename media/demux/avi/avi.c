@@ -357,6 +357,9 @@ avi_mux_one_frame(
                             (uint8_t*)(pCur + 2), &pCtrl_info->bs_len);
         if( rval )      break;
 
+        // change to bit-stream frame state
+        frm_state = pCtrl_info->frm_state;
+
         if( !(frm_state & AVI_FRAME_END) )
             break;
 
