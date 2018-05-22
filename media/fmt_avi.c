@@ -251,8 +251,6 @@ meida_fmt_avi_init(
 
             g_avi_io.pStream_buf = pMedia_init->mem.pStream_buf;
             memcpy(g_meida_raw_buf, g_avi_io.pStream_buf, MEDIA_RAW_BUF_SIZE);
-
-            g_media_data_pos += MEDIA_RAW_BUF_SIZE;
         }
 
         MEDIA_CHK(rval, avi_parse_header((uint32_t*)g_meida_raw_buf, MEDIA_RAW_BUF_SIZE, &g_media_filesize, &g_media_data_offset), MEDIA_ERR_OPERATOR);
@@ -272,6 +270,8 @@ meida_fmt_avi_init(
                 rval = -1;
                 break;
             }
+
+            g_media_data_pos = MEDIA_RAW_BUF_SIZE;
         }
 
     } while(0);
